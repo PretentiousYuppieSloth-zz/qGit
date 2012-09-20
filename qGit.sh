@@ -41,7 +41,7 @@ do
  echo "1. Add file to Git(staging area)"
  echo "2. Push changes to Master repo"
  echo "3. Initialize new Github Project"
- echo "4. Initialize existing Project"
+ echo "4. Initialize existing Project(make githubbable)"
  echo "5. Configure Git / Github and misc"
  echo "6. Important!  Please read"
  echo "7. Exit"
@@ -99,7 +99,7 @@ do
 
      mkdir $RepoName;
      (cd $RepoName/ && git init);
-     (cd $RepoName/ && git add $filename);
+
      (cd $RepoName/ && git remote add origin git@github.com:$Username/$RepoName.git);
      (cd $RepoName/ && git config --global user.email "$Email");
      (cd $RepoName/ && git pull origin master);
@@ -118,7 +118,7 @@ do
      read Email;
 
      (cd $RepoName/ && git init);
-     (cd $RepoName/ && git add $filename);
+
      (cd $RepoName/ && git remote add origin git@github.com:$Username/$RepoName.git);
      (cd $RepoName/ && git config --global user.email "$Email");
      (cd $RepoName/ && git pull origin master);
