@@ -41,7 +41,7 @@ do
  echo "1. Add file to Git(staging area)"
  echo "2. Push changes to Master repo"
  echo "3. Initialize new Github Project"
- echo "4. Initialize existing Github Project"
+ echo "4. Initialize existing Project"
  echo "5. Configure Git / Github and misc"
  echo "6. Important!  Please read"
  echo "7. Exit"
@@ -108,16 +108,15 @@ do
      read enterKey;;
 
 
-  4) echo "************ Initialize existing Github Project *************";
+  4) echo "************ Initialize existing Project to Github *************";
 	gitCheck;
-     echo -n "Name of repository:";
+     echo -n "Name of Project Directory (read menu point 6!) :";
      read RepoName;
      echo -n "GitHub Username, Case sensitive!:";
      read Username;
      echo -n "Email Github commits[public project email]:";
      read Email;
 
-     mkdir $RepoName;
      (cd $RepoName/ && git init);
      (cd $RepoName/ && git add $filename);
      (cd $RepoName/ && git remote add origin git@github.com:$Username/$RepoName.git);
@@ -226,13 +225,13 @@ do
   6) echo "************ IMPORTANT *************";
      echo "Hey $USER"
      echo "Please put this file in the directory where you have all your GitHub Projects";
-     echo "";
+     echo "The project is developed on a standard ubuntu 12.04, crap might work on othe rsystems.. what do i know. <3";
      echo "--->Project-Directory\\ConfiGit.sh";
      echo "--->Project-Directory\\Project1\\";
      echo "--->Project-Directory\\Project2\\";
      echo "--->Project-Directory\\Project3\\";
      echo "";
-     echo "Now, ";
+     echo "Now, you honestly need some knowledge of how the hell github works.. check out this page... its got some great info and all that jazz. ";
      echo "";
      echo "Press [enter] key to continue. . .";
      read enterKey;;
